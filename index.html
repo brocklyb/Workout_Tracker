@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANDBOX</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<div id="main_container">
+    <div id="left_container"> 
+        <div id="craete_user_container">
+            <form id="create_user">
+                <label>Enter the informatio below to create a new profile<br></label>
+                <input id="fname" placeholder="First Name" type="text"><br>
+                <input id="age" placeholder="Age" type="number"><br>
+                <input id="height" placeholder="Height" type="number"><br>
+                <input id="weight" placeholder="Weight" type="number"><br>
+                <br>
+                <label>What is your 1 rep personal record?<br></label>
+                <input id="benchpress" placeholder="Bench Press" type="number"><br>
+                <input id="squat" placeholder="Squat" type="number"><br>
+                <input id="deadlift" placeholder="Deadlift" type="number"><br>
+                
+            </form>
+        </div>
+
+        <br>
+
+        <div id="wokrout_choice_container">
+            <form id="workout_choice">
+                <label>What schedule would you like to follow?<br></label>
+                    Monday:<select name="mon_selection" id="mon_selection">
+                            <option value="chest">Chest</option>
+                            <option value="arms">Arms</option>
+                            <option value="legs">Legs</option>
+                            <option value="back">Back</option>
+                            <option value="rest">Rest</option>
+                        </select><br>
+                    Tuesday:<select name="tue_selection" id="tue_selection">
+                            <option value="chest">Chest</option>
+                            <option value="arms">Arms</option>
+                            <option value="legs">Legs</option>
+                            <option value="back">Back</option>
+                            <option value="rest">Rest</option>
+                        </select><br> 
+                    Wednesday:<select name="wed_selection" id="wed_selection">
+                            <option value="chest">Chest</option>
+                            <option value="arms">Arms</option>
+                            <option value="legs">Legs</option>
+                            <option value="back">Back</option>
+                            <option value="rest">Rest</option>
+                        </select><br>
+                    Thursday:<select name="thu_selection" id="thu_selection">
+                            <option value="chest">Chest</option>
+                            <option value="arms">Arms</option>
+                            <option value="legs">Legs</option>
+                            <option value="back">Back</option>
+                            <option value="rest">Rest</option>
+                        </select><br>
+                    Friday:<select name="fri_selection" id="fri_selection">
+                            <option value="chest">Chest</option>
+                            <option value="arms">Arms</option>
+                            <option value="legs">Legs</option>
+                            <option value="back">Back</option>
+                            <option value="rest">Rest</option>
+                        </select><br> 
+                    Saturday:<select name="sat_selection" id="sat_selection">
+                            <option value="chest">Chest</option>
+                            <option value="arms">Arms</option>
+                            <option value="legs">Legs</option>
+                            <option value="back">Back</option>
+                            <option value="rest">Rest</option>
+                        </select><br>
+                    Sunday:<select name="sun_selection" id="sun_selection">
+                            <option value="chest">Chest</option>
+                            <option value="arms">Arms</option>
+                            <option value="legs">Legs</option>
+                            <option value="back">Back</option>
+                            <option value="rest">Rest</option>
+                        </select><br>
+                    <button id="submit_create_user" type="button" onclick="newUser()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="display_schedule_main_container">
+        <div id="monday_schedule">
+            <div id="monday">Day</div>
+            <div id="main_lift_mon">Main Lift</div>
+            <div id="excercise2_mon">excercise2</div>
+            <div id="excercise3_mon">excercise3</div>
+            <div id="excercise4_mon">excercise4</div>
+            <div id="excercise5_mon">excercise5</div>
+            <div id="excercise6_mon">excercise6</div>
+        </div>
+        <br>
+        <div id="tuesday_schedule">
+            <div id="tuesday">Day</div>
+            <div id="main_lift_tue">Main Lift</div>
+            <div id="excercise2_tue">excercise2</div>
+            <div id="excercise3_tue">excercise3</div>
+            <div id="excercise4_tue">excercise4</div>
+            <div id="excercise5_tue">excercise5</div>
+            <div id="excercise6_tue">excercise6</div>
+        </div>
+        <br>
+        <div id="wednesday_schedule">
+            <div id="wednesday">Day</div>
+            <div id="main_lift_wed">Main Lift</div>
+            <div id="excercise2_wed">excercise2</div>
+            <div id="excercise3_wed">excercise3</div>
+            <div id="excercise4_wed">excercise4</div>
+            <div id="excercise5_wed">excercise5</div>
+            <div id="excercise6_wed">excercise6</div>
+        </div>
+        <br>
+        <div id="thursday_schedule">
+            <div id="thursday">Day</div>
+            <div id="main_lift_thu">Main Lift</div>
+            <div id="excercise2_thu">excercise2</div>
+            <div id="excercise3_thu">excercise3</div>
+            <div id="excercise4_thu">excercise4</div>
+            <div id="excercise5_thu">excercise5</div>
+            <div id="excercise6_thu">excercise6</div>
+        </div>
+        <br>
+        <div id="friday_schedule">
+            <div id="friday">Day</div>
+            <div id="main_lift_fri">Main Lift</div>
+            <div id="excercise2_fri">excercise2</div>
+            <div id="excercise3_fri">excercise3</div>
+            <div id="excercise4_fri">excercise4</div>
+            <div id="excercise5_fri">excercise5</div>
+            <div id="excercise6_fri">excercise6</div>
+        </div>
+        <br>
+        <div id="saturday_schedule">
+            <div id="saturday">Day</div>
+            <div id="main_lift_sat">Main Lift</div>
+            <div id="excercise2_sat">excercise2</div>
+            <div id="excercise3_sat">excercise3</div>
+            <div id="excercise4_sat">excercise4</div>
+            <div id="excercise5_sat">excercise5</div>
+            <div id="excercise6_sat">excercise6</div>
+        </div>
+        <br>
+        <div id="sunday_schedule">
+            <div id="sunday">Day</div>
+            <div id="main_lift_sun">Main Lift</div>
+            <div id="excercise2_sun">excercise2</div>
+            <div id="excercise3_sun">excercise3</div>
+            <div id="excercise4_sun">excercise4</div>
+            <div id="excercise5_sun">excercise5</div>
+            <div id="excercise6_sun">excercise6</div>
+        </div>
+    </div>
+</div>
+      
+    
+</body>
+</html>

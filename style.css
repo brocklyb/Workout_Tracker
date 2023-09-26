@@ -1,0 +1,20 @@
+html{
+    background-color: grey;
+}
+
+#main_container{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+}
+
+#left_container{
+    grid-column: 1/1;
+   
+}
+
+#display_schedule_main_container{
+    grid-column: 2/2;
+    grid-row: 1/1;
+    
+}
