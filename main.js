@@ -70,11 +70,97 @@ function randomWorkout(limb_choice){
     if(limb_choice == "back"){
         let back = BACK_WORKOUTS[(Math.floor(Math.random() * BACK_WORKOUTS.length))]
         return back
-    }
-
-    
+    }  
 }
 
+/*Exercise 1 is the main_lift for each dayfrimon
+This constructro creates a workotu object for each day */
+function dailyWorkoutConstructor(day,excercise1,excercise2,excercise3,excercise4,excercise5,excercise6){
+    day:
+    excercise1:
+    excercise2:
+    excercise3:
+    excercise4:
+    excercise5:
+    excercise6:
+    return {day,excercise1,excercise2,excercise3,excercise4,excercise5,excercise6}
+}
+
+/*Exercise 1 is the main_lift for each day
+this gathers all of the generated workouts displayed
+and creates objects for each day that contain all workouts for that day
+ */
+
+const DAILY_ROUTINE = []
+function dailyRoutine(){
+    let monday = "Monday"
+    let main_lift_monday = main_lift_mon.innerHTML
+    let excercise2_mon = document.getElementById("excercise2_mon").innerHTML
+    let excercise3_mon = document.getElementById("excercise3_mon").innerHTML
+    let excercise4_mon = document.getElementById("excercise4_mon").innerHTML
+    let excercise5_mon = document.getElementById("excercise5_mon").innerHTML
+    let excercise6_mon = document.getElementById("excercise6_mon").innerHTML
+    const monday_routine = new dailyWorkoutConstructor(monday,main_lift_monday,excercise2_mon,excercise3_mon,excercise4_mon,excercise5_mon,excercise6_mon)
+    
+    let tuesday = "Tuesday"
+    let main_lift_tuesday = main_lift_tue.innerHTML
+    let excercise2_tue = document.getElementById("excercise2_tue").innerHTML
+    let excercise3_tue = document.getElementById("excercise3_tue").innerHTML
+    let excercise4_tue = document.getElementById("excercise4_tue").innerHTML
+    let excercise5_tue = document.getElementById("excercise5_tue").innerHTML
+    let excercise6_tue = document.getElementById("excercise6_tue").innerHTML
+    const tuesday_routine = new dailyWorkoutConstructor(tuesday,main_lift_tuesday,excercise2_tue,excercise3_tue,excercise4_tue,excercise5_tue,excercise6_tue)
+
+    let wednesday = "Wednesday"
+    let main_lift_wednesday = main_lift_wed.innerHTML
+    let excercise2_wed = document.getElementById("excercise2_wed").innerHTML
+    let excercise3_wed = document.getElementById("excercise3_wed").innerHTML
+    let excercise4_wed = document.getElementById("excercise4_wed").innerHTML
+    let excercise5_wed = document.getElementById("excercise5_wed").innerHTML
+    let excercise6_wed = document.getElementById("excercise6_wed").innerHTML
+    const wednesday_routine = new dailyWorkoutConstructor(wednesday,main_lift_wednesday,excercise2_wed,excercise3_wed,excercise4_wed,excercise5_wed,excercise6_wed)
+
+    let thursday = "Thursday"
+    let main_lift_thursday = main_lift_thu.innerHTML
+    let excercise2_thu = document.getElementById("excercise2_thu").innerHTML
+    let excercise3_thu = document.getElementById("excercise3_thu").innerHTML
+    let excercise4_thu = document.getElementById("excercise4_thu").innerHTML
+    let excercise5_thu = document.getElementById("excercise5_thu").innerHTML
+    let excercise6_thu = document.getElementById("excercise6_thu").innerHTML
+    const thursday_routine = new dailyWorkoutConstructor(thursday,main_lift_thursday,excercise2_thu,excercise3_thu,excercise4_thu,excercise5_thu,excercise6_thu)
+
+    let friday = "Friday"
+    let main_lift_friday = main_lift_fri.innerHTML
+    let excercise2_fri = document.getElementById("excercise2_fri").innerHTML
+    let excercise3_fri = document.getElementById("excercise3_fri").innerHTML
+    let excercise4_fri = document.getElementById("excercise4_fri").innerHTML
+    let excercise5_fri = document.getElementById("excercise5_fri").innerHTML
+    let excercise6_fri = document.getElementById("excercise6_fri").innerHTML
+    const friday_routine = new dailyWorkoutConstructor(friday,main_lift_friday,excercise2_fri,excercise3_fri,excercise4_fri,excercise5_fri,excercise6_fri)
+
+    let saturday = "Saturday"
+    let main_lift_saturday = main_lift_sat.innerHTML
+    let excercise2_sat = document.getElementById("excercise2_sat").innerHTML
+    let excercise3_sat = document.getElementById("excercise3_sat").innerHTML
+    let excercise4_sat = document.getElementById("excercise4_sat").innerHTML
+    let excercise5_sat = document.getElementById("excercise5_sat").innerHTML
+    let excercise6_sat = document.getElementById("excercise6_sat").innerHTML
+    const saturday_routine = new dailyWorkoutConstructor(saturday,main_lift_saturday,excercise2_sat,excercise3_sat,excercise4_sat,excercise5_sat,excercise6_sat)
+
+    let sunday = "Sunday"
+    let main_lift_sunday = main_lift_sun.innerHTML
+    let excercise2_sun = document.getElementById("excercise2_sun").innerHTML
+    let excercise3_sun = document.getElementById("excercise3_sun").innerHTML
+    let excercise4_sun = document.getElementById("excercise4_sun").innerHTML
+    let excercise5_sun = document.getElementById("excercise5_sun").innerHTML
+    let excercise6_sun = document.getElementById("excercise6_sun").innerHTML
+    const sunday_routine = new dailyWorkoutConstructor(sunday,main_lift_sunday,excercise2_sun,excercise3_sun,excercise4_sun,excercise5_sun,excercise6_sun)
+    DAILY_ROUTINE.push(monday_routine,tuesday_routine,wednesday_routine,thursday_routine,friday_routine,saturday_routine,sunday_routine,)
+}
+
+
+/*This function displays all of the workouts for each day. 
+They are randomly selected workouts from the global list */
 function displaySchedule(user,schedule){
     console.log(user,schedule)
 
