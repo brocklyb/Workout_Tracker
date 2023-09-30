@@ -2,6 +2,7 @@ const CHEST_WORKOUTS = ["Dumbell Press","Cable Fly","Close Grip Bench", "Incline
 const ARM_WORKOUTS = ["Preacher Curls", "Underhand Grip Curl","Pull Ups","Dumbell Curl","Cable Curl", "Shoulder Press"]
 const LEG_WORKOUTS = ["Romainian Deadlift", "Leg Curl", "Leg Extension", "Lunges" , "Calve Raises"]
 const BACK_WORKOUTS = ["Barbell Row", "Cable Row", "Lat Pull Down", "Shrugs" , "Lat Fly"]
+const DAILY_ROUTINE = []
 
 function createUserConstructor(fname,age,height,weight,benchpress,squat,deadlift){
     fname:
@@ -86,12 +87,102 @@ function dailyWorkoutConstructor(day,excercise1,excercise2,excercise3,excercise4
     return {day,excercise1,excercise2,excercise3,excercise4,excercise5,excercise6}
 }
 
+/*Create a function that allows users to edit the workout and excercises */
+function editWorkout(){
+
+}
+
+
+/*Create a function that allowsto log their rep count for each excercise*/
+function logWorkout(){
+
+}
+
+
+function displayGrid(){
+    
+    monday_header.innerHTML = DAILY_ROUTINE[0].day 
+    exc1_mon.innerHTML = DAILY_ROUTINE[0].excercise1
+    exc2_mon.innerHTML = DAILY_ROUTINE[0].excercise2
+    exc3_mon.innerHTML = DAILY_ROUTINE[0].excercise3
+    exc4_mon.innerHTML = DAILY_ROUTINE[0].excercise4
+    exc5_mon.innerHTML = DAILY_ROUTINE[0].excercise5
+    exc6_mon.innerHTML = DAILY_ROUTINE[0].excercise6
+
+    tuesday_header.innerHTML = DAILY_ROUTINE[1].day
+    exc1_tue.innerHTML = DAILY_ROUTINE[1].excercise1
+    exc2_tue.innerHTML = DAILY_ROUTINE[1].excercise2
+    exc3_tue.innerHTML = DAILY_ROUTINE[1].excercise3
+    exc4_tue.innerHTML = DAILY_ROUTINE[1].excercise4
+    exc5_tue.innerHTML = DAILY_ROUTINE[1].excercise5
+    exc6_tue.innerHTML = DAILY_ROUTINE[1].excercise6
+
+
+    wednesday_header.innerHTML = DAILY_ROUTINE[2].day
+    exc1_wed.innerHTML = DAILY_ROUTINE[2].excercise1
+    exc2_wed.innerHTML = DAILY_ROUTINE[2].excercise2
+    exc3_wed.innerHTML = DAILY_ROUTINE[2].excercise3
+    exc4_wed.innerHTML = DAILY_ROUTINE[2].excercise4
+    exc5_wed.innerHTML = DAILY_ROUTINE[2].excercise5
+    exc6_wed.innerHTML = DAILY_ROUTINE[2].excercise6
+
+    thursday_header.innerHTML = DAILY_ROUTINE[3].day
+    exc1_thu.innerHTML = DAILY_ROUTINE[3].excercise1
+    exc2_thu.innerHTML = DAILY_ROUTINE[3].excercise2
+    exc3_thu.innerHTML = DAILY_ROUTINE[3].excercise3
+    exc4_thu.innerHTML = DAILY_ROUTINE[3].excercise4
+    exc5_thu.innerHTML = DAILY_ROUTINE[3].excercise5
+    exc6_thu.innerHTML = DAILY_ROUTINE[3].excercise6
+
+    friday_header.innerHTML = DAILY_ROUTINE[4].day
+    exc1_fri.innerHTML = DAILY_ROUTINE[4].excercise1
+    exc2_fri.innerHTML = DAILY_ROUTINE[4].excercise2
+    exc3_fri.innerHTML = DAILY_ROUTINE[4].excercise3
+    exc4_fri.innerHTML = DAILY_ROUTINE[4].excercise4
+    exc5_fri.innerHTML = DAILY_ROUTINE[4].excercise5
+    exc6_fri.innerHTML = DAILY_ROUTINE[4].excercise6
+
+
+    saturday_header.innerHTML = DAILY_ROUTINE[5].day
+    exc1_sat.innerHTML = DAILY_ROUTINE[5].excercise1
+    exc2_sat.innerHTML = DAILY_ROUTINE[5].excercise2
+    exc3_sat.innerHTML = DAILY_ROUTINE[5].excercise3
+    exc4_sat.innerHTML = DAILY_ROUTINE[5].excercise4
+    exc5_sat.innerHTML = DAILY_ROUTINE[5].excercise5
+    exc6_sat.innerHTML = DAILY_ROUTINE[5].excercise6
+
+    sunday_header.innerHTML = DAILY_ROUTINE[6].day
+    exc1_sun.innerHTML = DAILY_ROUTINE[6].excercise1
+    exc2_sun.innerHTML = DAILY_ROUTINE[6].excercise2
+    exc3_sun.innerHTML = DAILY_ROUTINE[6].excercise3
+    exc4_sun.innerHTML = DAILY_ROUTINE[6].excercise4
+    exc5_sun.innerHTML = DAILY_ROUTINE[6].excercise5
+    exc6_sun.innerHTML = DAILY_ROUTINE[6].excercise6
+
+
+    /*
+    for (let x=0; x<DAILY_ROUTINE.length; x++){
+        var hold_object = DAILY_ROUTINE[x]
+
+        
+        const output_element = document.createElement("p")
+        output_element.setAttribute("id",x)
+        
+        
+        output_element.innerHTML = hold_object.day + hold_object.excercise1 + hold_object.excercise2 + hold_object.excercise3 + hold_object.excercise4 + hold_object.excercise5 + hold_object.excercise6
+        
+
+        
+       /* document.getElementById("week_grid").appendChild(output_element) */ 
+
+    
+}
+
+
 /*Exercise 1 is the main_lift for each day
 this gathers all of the generated workouts displayed
 and creates objects for each day that contain all workouts for that day
  */
-
-const DAILY_ROUTINE = []
 function dailyRoutine(){
     let monday = "Monday"
     let main_lift_monday = main_lift_mon.innerHTML
@@ -538,3 +629,4 @@ function displaySchedule(user,schedule){
 
    
 }
+

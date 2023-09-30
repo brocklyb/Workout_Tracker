@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SANDBOX</title>
+    <title>Workout_App</title>
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css"> 
+    
 </head>
 <body>
 <div id="main_container">
@@ -83,83 +84,443 @@
                     <button id="submit_create_user" type="button" onclick="newUser()">Submit</button>
             </form>
         </div>
-        <button id="lgtm" onclick="dailyRoutine()">Workout Schedule is accurate</button>
+        <button id="lgtm" onclick="dailyRoutine()">Workout Schedule is accurate</button><br>
+        <button id="display_grid" onclick="displayGrid()">Display Data</button>
     </div>
 
     
     <br>
 
-    <div id="display_schedule_main_container">
+    <div id="display_schedule_main_container" class="list">
         <div id="monday_schedule">
-            <div id="monday">Day</div>
-            <div id="main_lift_mon">Main Lift</div>
-            <div id="excercise2_mon">excercise2</div>
-            <div id="excercise3_mon">excercise3</div>
-            <div id="excercise4_mon">excercise4</div>
-            <div id="excercise5_mon">excercise5</div>
-            <div id="excercise6_mon">excercise6</div>
+            <div id="monday" class="list">Day</div>
+            <div id="main_lift_mon" class="list">Main Lift</div>
+            <div id="excercise2_mon" class="list">excercise2</div>
+            <div id="excercise3_mon" class="list">excercise3</div>
+            <div id="excercise4_mon" class="list">excercise4</div>
+            <div id="excercise5_mon" class="list">excercise5</div>
+            <div id="excercise6_mon" class="list">excercise6</div>
         </div>
         <br>
-        <div id="tuesday_schedule">
-            <div id="tuesday">Day</div>
-            <div id="main_lift_tue">Main Lift</div>
-            <div id="excercise2_tue">excercise2</div>
-            <div id="excercise3_tue">excercise3</div>
-            <div id="excercise4_tue">excercise4</div>
-            <div id="excercise5_tue">excercise5</div>
-            <div id="excercise6_tue">excercise6</div>
+        <div id="tuesday_schedule" class="list">
+            <div id="tuesday" class="list">Day</div>
+            <div id="main_lift_tue" class="list">Main Lift</div>
+            <div id="excercise2_tue" class="list">excercise2</div>
+            <div id="excercise3_tue" class="list">excercise3</div>
+            <div id="excercise4_tue" class="list">excercise4</div>
+            <div id="excercise5_tue" class="list">excercise5</div>
+            <div id="excercise6_tue" class="list">excercise6</div>
         </div>
         <br>
-        <div id="wednesday_schedule">
-            <div id="wednesday">Day</div>
-            <div id="main_lift_wed">Main Lift</div>
-            <div id="excercise2_wed">excercise2</div>
-            <div id="excercise3_wed">excercise3</div>
-            <div id="excercise4_wed">excercise4</div>
-            <div id="excercise5_wed">excercise5</div>
-            <div id="excercise6_wed">excercise6</div>
+        <div id="wednesday_schedule" class="list">
+            <div id="wednesday" class="list">Day</div>
+            <div id="main_lift_wed" class="list">Main Lift</div>
+            <div id="excercise2_wed" class="list">excercise2</div>
+            <div id="excercise3_wed" class="list">excercise3</div>
+            <div id="excercise4_wed" class="list">excercise4</div>
+            <div id="excercise5_wed" class="list">excercise5</div>
+            <div id="excercise6_wed" class="list">excercise6</div>
         </div>
         <br>
-        <div id="thursday_schedule">
-            <div id="thursday">Day</div>
-            <div id="main_lift_thu">Main Lift</div>
-            <div id="excercise2_thu">excercise2</div>
-            <div id="excercise3_thu">excercise3</div>
-            <div id="excercise4_thu">excercise4</div>
-            <div id="excercise5_thu">excercise5</div>
-            <div id="excercise6_thu">excercise6</div>
+        <div id="thursday_schedule" class="list">
+            <div id="thursday" class="list">Day</div>
+            <div id="main_lift_thu" class="list">Main Lift</div>
+            <div id="excercise2_thu" class="list">excercise2</div>
+            <div id="excercise3_thu" class="list">excercise3</div>
+            <div id="excercise4_thu" class="list">excercise4</div>
+            <div id="excercise5_thu" class="list">excercise5</div>
+            <div id="excercise6_thu" class="list">excercise6</div>
         </div>
         <br>
-        <div id="friday_schedule">
-            <div id="friday">Day</div>
-            <div id="main_lift_fri">Main Lift</div>
-            <div id="excercise2_fri">excercise2</div>
-            <div id="excercise3_fri">excercise3</div>
-            <div id="excercise4_fri">excercise4</div>
-            <div id="excercise5_fri">excercise5</div>
-            <div id="excercise6_fri">excercise6</div>
+        <div id="friday_schedule" class="list">
+            <div id="friday" class="list">Day</div>
+            <div id="main_lift_fri" class="list">Main Lift</div>
+            <div id="excercise2_fri" class="list">excercise2</div>
+            <div id="excercise3_fri" class="list">excercise3</div>
+            <div id="excercise4_fri" class="list">excercise4</div>
+            <div id="excercise5_fri" class="list">excercise5</div>
+            <div id="excercise6_fri" class="list">excercise6</div>
         </div>
         <br>
-        <div id="saturday_schedule">
-            <div id="saturday">Day</div>
-            <div id="main_lift_sat">Main Lift</div>
-            <div id="excercise2_sat">excercise2</div>
-            <div id="excercise3_sat">excercise3</div>
-            <div id="excercise4_sat">excercise4</div>
-            <div id="excercise5_sat">excercise5</div>
-            <div id="excercise6_sat">excercise6</div>
+        <div id="saturday_schedule" class="list">
+            <div id="saturday" class="list">Day</div>
+            <div id="main_lift_sat" class="list">Main Lift</div>
+            <div id="excercise2_sat" class="list">excercise2</div>
+            <div id="excercise3_sat" class="list">excercise3</div>
+            <div id="excercise4_sat" class="list">excercise4</div>
+            <div id="excercise5_sat" class="list">excercise5</div>
+            <div id="excercise6_sat" class="list">excercise6</div>
         </div>
         <br>
-        <div id="sunday_schedule">
-            <div id="sunday">Day</div>
-            <div id="main_lift_sun">Main Lift</div>
-            <div id="excercise2_sun">excercise2</div>
-            <div id="excercise3_sun">excercise3</div>
-            <div id="excercise4_sun">excercise4</div>
-            <div id="excercise5_sun">excercise5</div>
-            <div id="excercise6_sun">excercise6</div>
+        <div id="sunday_schedule" class="list">
+            <div id="sunday" class="list">Day</div>
+            <div id="main_lift_sun" class="list">Main Lift</div>
+            <div id="excercise2_sun" class="list">excercise2</div>
+            <div id="excercise3_sun" class="list">excercise3</div>
+            <div id="excercise4_sun" class="list">excercise4</div>
+            <div id="excercise5_sun" class="list">excercise5</div>
+            <div id="excercise6_sun" class="list">excercise6</div>
         </div>
     </div>
+</div>
+
+<div id="table_layout_container">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Week 1</th>
+                <th>Week 2</th>
+                <th>Week 3</th>
+                <th>Week 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="monday_header">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc1_mon">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc2_mon">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc3_mon">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc4_mon">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc5_mon">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc6_mon">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="tuesday_header">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc1_tue">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc2_tue">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc3_tue">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc4_tue">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc5_tue">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc6_tue">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="wednesday_header">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc1_wed">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc2_wed">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc3_wed">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc4_wed">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc5_wed">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc6_wed">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="thursday_header">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc1_thu">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc2_thu">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc3_thu">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc4_thu">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc5_thu">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc6_thu">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="friday_header">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc1_fri">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc2_fri">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc3_fri">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc4_fri">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc5_fri">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc6_fri">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="saturday_header">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc1_sat">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc2_sat">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc3_sat">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc4_sat">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc5_sat">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc6_sat">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="sunday_header">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc1_sun">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc2_sun">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc3_sun">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc4_sun">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc5_sun">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="exc6_sun">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
       
     

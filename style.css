@@ -5,16 +5,61 @@ html{
 #main_container{
     display: grid;
     grid-template-columns: 2;
-    grid-template-rows: 1;
+    grid-template-rows: 2;
 }
 
 #left_container{
     grid-column: 1/1;
-   
 }
 
 #display_schedule_main_container{
     grid-column: 2/2;
     grid-row: 1/1;
+    font-size: small;
+    
     
 }
+
+
+
+#lgtm{
+    background-color: white;
+    transition-property: blue;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.25s;
+}
+button:hover{
+    background-color: black;
+    
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.25s;
+}
+
+
+table {
+    border:1px solid #b3adad;
+    border-collapse:collapse;
+    padding:5px;
+}
+table th {
+    border:1px solid #b3adad;
+    padding:5px;
+    background: #f0f0f0;
+    color: #313030;
+}
+table td {
+    border:1px solid #b3adad;
+    text-align:center;
+    padding:5px;
+    background: #ffffff;
+    color: #313030;
+}
+
+#monday_header , #tuesday_header ,
+#wednesday_header, #thursday_header,
+#friday_header, #saturday_header, #sunday_header{
+    font-weight: bold;
+}
+
